@@ -2,12 +2,12 @@
 
 /* Services */
 
-var filmstillServices = angular.module("filmstillServices", ["ngResoure"]);
+var filmstillServices = angular.module("filmstillServices", []);
 
   filmstillServices.factory( 'movie_data', function ( $http ) {
-    return function ( ) {
-      return $http.get( 'https://fierce-springs-1255.herokuapp.com/api/v1/movies.json');
-    };
+    return $http.get( 'https://fierce-springs-1255.herokuapp.com/api/v1/movies.json').success(function(data) {
+      $scope.album = data;
+    })
   })
 
 
