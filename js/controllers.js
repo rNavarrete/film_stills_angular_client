@@ -9,7 +9,7 @@ filmStillsControllers.controller("MovieListCtrl", ["$scope", "$http",
     });
   }])
 
-  .controller( 'Main', function ( $scope, movie_data ) {
+  .controller( 'Main', function ( $scope, movie_data, colibri ) {
     movie_data.then( function ( xhr ) {
       console.log(xhr.data.movies);
       $scope.albums = xhr.data.movies.map ( function ( entry ) {
