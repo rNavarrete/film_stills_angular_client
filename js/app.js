@@ -8,7 +8,7 @@ filmStillsApp.config(["$routeProvider",
         controller: "NewMovieStillCtrl"
       }).when("/", {
         templateUrl: "partials/movies_index.html",
-        controller: "MovieListCtrl"
+        controller: "Main"
       })
    }])
 
